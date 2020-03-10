@@ -78,6 +78,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<br>
 <?php
 	echo $ejemplo;
+	print_r ($alumno);
+	foreach ($alumno as $key => $value){
+		echo $value."<br>";
+	}
 ?>
 
 </div>

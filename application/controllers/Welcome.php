@@ -20,7 +20,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->model("Alumno_datos");
+		$alumno = $this->Alumno_datos->get_alumno();
+		//print_r($alumno);
 		$datos["ejemplo"]="Pasa datos";
+		$datos["alumno"]=$alumno;
 		$this->load->view('mipagina', $datos);
 	}
 	public function index2()
