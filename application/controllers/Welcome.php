@@ -26,10 +26,13 @@ class Welcome extends CI_Controller {
 		$datos["ejemplo"]="Pasa datos";
 		$datos["alumno"]=$alumno;
 		$this->load->view('mipagina', $datos);
+		// TODO Desplegar todos los datos de la base de datos
 	}
 	public function index2()
 	{
-		$this->load->view('welcome_message'); 
+		$aceptar = $_GET['aceptar'];
+		$datos['Aceptar'] = $aceptar;
+		$this->load->view('welcome_message', $datos); 
 		// Para acceder a esta vista : http://localhost/code/index.php/Welcome/index2
 	}
 }
